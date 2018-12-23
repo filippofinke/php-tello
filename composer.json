@@ -1,0 +1,13 @@
+{
+    "name": "filippofinke/php-tello",
+    "authors": [
+        {
+            "name": "filippofinke",
+            "email": "filippo.finke@samtrevano.ch"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Classes\\": "classes/"}
+    },
+    "require": {}
+}
