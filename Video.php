@@ -12,5 +12,6 @@ socket_bind($resource, $address, $port);
 echo "[Info] Server avviato.".PHP_EOL;
 while (true) {
     socket_recvfrom($resource, $buf, 2048, 0, $from, $port);
+    echo $buf;
     file_put_contents("video.h264",$buf, FILE_APPEND);
 }
