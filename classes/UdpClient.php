@@ -14,7 +14,7 @@ class UdpClient
         $this->address = $address;
         $this->port = $port;
         $this->socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
-        socket_set_option($this->socket,SOL_SOCKET,SO_RCVTIMEO,array("sec"=>5,"usec"=>0));
+        socket_set_option($this->socket,SOL_SOCKET,SO_RCVTIMEO,array("sec"=>15,"usec"=>0));
     }
 
     public function sendCommand($command)

@@ -9,24 +9,16 @@ $udp = new UdpClient("192.168.10.1", 8889);
 
 $commands = array(
   Commands::command(),
-  Commands::streamon(),
-  Commands::getBattery()
+  Commands::streamon()
   /*Commands::takeoff(),
-  Commands::speed(100),
-  Commands::up(50),
-  Commands::forward(200),
-  Commands::back(200),
+  Commands::go(50,50,100, 30),
+  new Command("Delay", 10000),
   Commands::land()*/
 );
 
 foreach ($commands as $cmd) {
   echo "[Eseguo] ".$cmd->getCommand().PHP_EOL;
   $udp->sendCommand($cmd);
-  for ($i=2; $i > 0; $i--) {
-    echo "[Attesa] $i s".PHP_EOL;
-    sleep(1);
-  }
-  readCmd();
 }
 
 function readCmd() {

@@ -5,27 +5,27 @@ class Commands
 {
     public static function command()
     {
-        return new Command(self::getMethodName(), 500);
+        return new Command(self::getMethodName(), 250);
     }
 
     public static function takeoff()
     {
-        return new Command(self::getMethodName(), 500);
+        return new Command(self::getMethodName(), 7000);
     }
 
     public static function land()
     {
-        return new Command(self::getMethodName(), 500);
+        return new Command(self::getMethodName(), 7000);
     }
 
     public static function streamon()
     {
-        return new Command(self::getMethodName(), 500);
+        return new Command(self::getMethodName(), 250);
     }
 
     public static function streamoff()
     {
-        return new Command(self::getMethodName(), 500);
+        return new Command(self::getMethodName(), 250);
     }
 
     public static function emergency()
@@ -114,7 +114,7 @@ class Commands
     public static function speed($speed)
     {
         $speed = self::sanitizeSpeed($speed);
-        return new Command(self::getMethodName()." ".$speed, 500);
+        return new Command(self::getMethodName()." ".$speed, 1000);
     }
 
     public function rc($a, $b, $c, $d)

@@ -15,7 +15,9 @@ while (true) {
     socket_recvfrom($resource, $buf, 2048, 0, $from, $port);
     if($x % 3 == 0)
     {
-      var_dump(StatusParser::parse($buf));
+      $data = StatusParser::parse($buf);
+      var_dump($data);
+      $x = 0;
     }
     $x++;
 }
